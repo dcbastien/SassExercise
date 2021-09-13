@@ -2,23 +2,22 @@
 
 
 .main {background-color: tan;
-    @include flex (none,center);
-    h1{
-        color: #ddd;
-        @include flex (flex-start,flex-start);
+
+    h1 {
+        color: #ddd;   
+     &:hover {text-decoration: underline;
+        @extend %center;}
     }
 
 h2{
     background-color: $brown1;
-    @include flex (center, center);
 }
-h3{
+h3 {
     color: $brown1;
-    @include flex (flex-end, right)
 }
-
-h1:hover{text-decoration: underline;
-@extend %center;}
+@include flex(space-between, center);
+h4 {display: none;
+}
 }
 
 .minor {
